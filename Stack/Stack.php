@@ -17,7 +17,7 @@ class Stack
 
     public function pop(): mixed
     {
-        if($this->pointer === 0){
+        if($this->isEmpty()){
             throw new Exception('Can not pop element from empty stack');
         }
         $this->pointer--;
@@ -26,7 +26,7 @@ class Stack
 
     public function top(): mixed
     {
-        if($this->pointer === 0){
+        if($this->isEmpty()){
             throw new Exception('Can not return top of empty stack');
         }
         return $this->stack[$this->pointer - 1];
