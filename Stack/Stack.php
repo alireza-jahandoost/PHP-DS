@@ -21,7 +21,7 @@ class Stack
             throw new Exception('Can not pop element from empty stack');
         }
         $this->pointer--;
-        return array_pop($this->stack);
+        return $this->stack[$this->pointer];
     }
 
     public function top(): mixed
